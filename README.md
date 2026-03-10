@@ -29,26 +29,35 @@ Signals from the OpenBCI headset can be sent to LabRecorder (e.g. to synchronize
 
 - Click “Start LSL Stream”.
 
-See also:
-- https://openbci.com/forum/index.php?p=/discussion/comment/21540#Comment_21540
-- https://openbci.com/forum/index.php?p=/discussion/comment/21537#Comment_21537
+See also https://openbci.com/forum/index.php?p=/discussion/comment/21540#Comment_21540
 
 ## LabRecorder
 - Install LabRecorder: https://github.com/labstreaminglayer/App-LabRecorder.
-- Launch LabRecorder. On Linux, the default installation path is often usr/bin and is launched with ./LabRecorder
+- Launch LabRecorder. On Linux, its default installation path is often usr/bin and it is launched with ./LabRecorder
 - Click “Update” and verify that the stream from the OpenBCI GUI appears in the list of streams (see image below).
+
+![Visualization of DELAUNAY dataset.](illus2.png)
+
+
 Once both the Psychopy experiment and the EEG GUI are running, their streams will appear
-(https://docs.openbci.com/Software/CompatibleThirdPartySoftware/LSL/) and can be recorded. They will be saved as .xdf files, which you can then open in Python (see below).
+(https://docs.openbci.com/Software/CompatibleThirdPartySoftware/LSL/) and can be recorded. They will be saved as .xdf files, which can then be read in Python (see below).
 
 ## PsychoPy
 The following toy experiments can be opened using the PsychoPy builder:
 - In toy_experiment_1, a trigger (of value 1) will be sent whenever the user presses the spacebar.
-- In toy_experiment_2, after a waiting time of 10s (to leave you some time to start the recording on LabRecorder, 10 triggers (labeled from 1 to 10) will be automatically sent (with an inter-trigger interval of 1s).
+- In toy_experiment_2, after a waiting time of 10s (to leave  some time to start the recording on LabRecorder), 10 triggers (labeled from 1 to 10) will be automatically sent (with an inter-trigger interval of 1s).
 
 Once the PsychoPy experiment is running, click “Update” in LabRecorder. The second stream (i.e. coming from PsychoPy) should appear along the stream coming from the OpenBCI GUI.
+
+![Visualization of DELAUNAY dataset.](illus3.png)
+
+
 Click “Start” to record the streams under the path and name specified in “Study_root” and “File Name/Template”, and then “Stop” at the end of the experiment.
 
 ## Data reading
 Outputs from LabRecorder are .xdf files, which can be open using e.g. Python. The data_reading.py script shows how to open and use a .xdf file. Assuming that the OpenBCI stream was AvgBandPower with name “obci_eeg1” and that the PsychoPy stream was coming from toy_experiment_1, the python script will read the most recent output from LabRecorder and will plot the alpha band power (i.e. the third column from the OpenBCI stream) along with the PsychoPy triggers.
+
+![Visualization of DELAUNAY dataset.](illus4.png)
+
 
 ## To do
