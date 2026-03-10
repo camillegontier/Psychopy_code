@@ -61,3 +61,5 @@ Outputs from LabRecorder are .xdf files, which can be open using e.g. Python. Th
 
 
 ## To do
+
+In the above example, I sent a trigger (dashed vertical lines) whenever I closed or opened my eyes. An alpha band power increase coincides with periods of closed eyes (i.e. Berger effect), which is a telltale sign of good synchronization between EEG streams and triggers. The accuracy of this synchronization could be further validated by manually sending triggers at the same time via Psychopy and via Cyton (https://openbci.com/forum/index.php?p=/discussion/4099/streaming-accel-aux-data-via-the-networking-widget#latest) and checking both triggers are synchronized.
