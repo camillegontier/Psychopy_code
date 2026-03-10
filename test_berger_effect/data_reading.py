@@ -13,8 +13,6 @@ import numpy as np
 # %matplotlib qt
 
 path = '/home/camille/Documents/CurrentStudy/sub-P001/ses-S001/eeg'
-# name_file = "sub-P001_ses-S001_task-Default_run-001_eeg_old16.xdf"
-# name_file = "sub-P001_ses-S001_task-Default_run-001_eeg_old20.xdf"
 name_file = "sub-P001_ses-S001_task-Default_run-001_eeg.xdf"
 
 dir_path = Path(path,name_file)
