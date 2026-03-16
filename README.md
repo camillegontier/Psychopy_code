@@ -8,6 +8,7 @@
 - Install the headset: https://docs.openbci.com/GettingStarted/Biosensing-Setups/EEGSetup/
  
 Additional documents on EEG recordings with the Cyton board are located in the "Handouts" folder.
+test
  
 ## OpenBCI GUI
 - Install the OpenBCI GUI: https://docs.openbci.com/Software/OpenBCISoftware/GUIDocs/
